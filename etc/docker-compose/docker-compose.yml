@@ -1,8 +1,5 @@
 version: '3'
 services:
-  #######
-  # Kafka
-  #######
 
   zookeeper:
     container_name: zookeeper
@@ -35,8 +32,8 @@ services:
     environment:
       LOG_DIR: "/tmp/logs"
       KAFKA_ADVERTISED_HOST_NAME: localhost
-      KAFKA_LISTENERS: "INTERNAL://0.0.0.0:9092"
-      KAFKA_ADVERTISED_LISTENERS: "INTERNAL://kafka:9092"
+      KAFKA_LISTENERS: "INTERNAL://:29092,EXTERNAL://:9092"
+      KAFKA_ADVERTISED_LISTENERS: "INTERNAL://kafka:29092,EXTERNAL://localhost:9992"
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_INTER_BROKER_LISTENER_NAME: "INTERNAL"
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: "INTERNAL:PLAINTEXT,EXTERNAL:PLAINTEXT"
@@ -48,4 +45,4 @@ services:
       - 9000:8080
     environment:
       KAFKA_CLUSTERS_0_NAME: local
-      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:9092
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:29092
