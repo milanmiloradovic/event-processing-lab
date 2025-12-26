@@ -1,0 +1,28 @@
+= Event Processing Lab
+:toc:
+
+== Intro
+
+Event Processing Lab is a personal playground for experimenting with Apache Kafka consumer behavior.
+
+The goal of this project is to explore Kafka configuration and real-world scenarios such as:
+
+- error handling
+- offset management
+- retries and dead letter queues
+- batch processing
+- idempotency using external systems (e.g. Redis)
+
+This repository is intentionally not production-ready and serves as a learning and experimentation space.
+
+== Focus Areas
+
+- High throughput processing
+- Error handling and retries
+- Dead Letter Queue (DLQ) patterns
+- Manual vs automatic offset management
+- Batch vs single-message processing
+- Consumer group behavior and rebalancing
+- Idempotent processing using external systems (e.g. Redis)
+
+Producers are kept simple and used only to generate test events.
