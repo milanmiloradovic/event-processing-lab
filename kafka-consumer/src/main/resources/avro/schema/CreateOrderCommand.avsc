@@ -1,0 +1,13 @@
+{
+  "namespace": "com.milanmiloradovic.kafka.consumer.avro.order.command",
+  "doc": "Command message to create a new order",
+  "type": "record",
+  "name": "CreateOrderCommand",
+  "fields": [
+    { "name": "orderId", "type": "string" },
+    { "name": "totalAmount", "type": "double" },
+    { "name": "currency", "type": "string" },
+    { "name": "timestamp", "type": "long" }
+  ]
+}
+

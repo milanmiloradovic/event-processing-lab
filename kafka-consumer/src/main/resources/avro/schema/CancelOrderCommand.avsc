@@ -1,0 +1,11 @@
+{
+  "namespace": "com.milanmiloradovic.kafka.consumer.avro.order.command",
+  "doc": "Command message to cancel an order",
+  "type": "record",
+  "name": "CancelOrderCommand",
+  "fields": [
+    { "name": "orderId", "type": "string" },
+    { "name": "reason", "type": "string" },
+    { "name": "timestamp", "type": "long" }
+  ]
+}

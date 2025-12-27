@@ -1,0 +1,12 @@
+{
+  "namespace": "com.milanmiloradovic.kafka.consumer.avro.order.command",
+  "doc": "Command message to ship an order",
+  "type": "record",
+  "name": "ShipOrderCommand",
+  "fields": [
+    { "name": "orderId", "type": "string" },
+    { "name": "carrier", "type": "string" },
+    { "name": "trackingNumber", "type": "string" },
+    { "name": "timestamp", "type": "long" }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "namespace": "com.milanmiloradovic.kafka.consumer.avro.order.command",
+  "doc": "Command message to pay an order",
+  "type": "record",
+  "name": "PayOrderCommand",
+  "fields": [
+    { "name": "orderId", "type": "string" },
+    {
+      "name": "paymentMethod",
+      "type": {
+        "type": "enum",
+        "name": "PaymentMethod",
+        "symbols": ["CARD", "PAYPAL", "BANK_TRANSFER"]
+      }
+    },
+    { "name": "timestamp", "type": "long" }
+  ]
+}
